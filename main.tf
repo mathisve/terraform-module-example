@@ -7,6 +7,6 @@ resource "aws_s3_bucket" "myBucket" {
 }
 
 resource "aws_s3_bucket_acl" "myBucket" {
-    bucket = aws_s3_bucket.myBucket.bucket
-    acl = "private"
+  bucket = aws_s3_bucket.myBucket.bucket
+  acl    = var.acl
 }
